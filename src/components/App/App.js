@@ -1,6 +1,6 @@
-// import logo from './logo.svg';
 import React from 'react';
 import './App.css';
+
 import Playlist from '../Playlist/Playlist';
 import SearchBar from '../SearchBar/SearchBar';
 import SearchResults from '../SearchResults/SearchResults';
@@ -24,6 +24,7 @@ class App extends React.Component{
     this.removeTrackSearch = this.removeTrackSearch.bind(this);
     this.doThese = this.doThese.bind(this);
   }
+
 
   search(term){
     Spotify.search(term).then(SearchResults => {
@@ -79,16 +80,15 @@ class App extends React.Component{
         <h1>
           <a href='http://localhost:3000'>Musicophile</a>
         </h1>
-  
         <div className="App">
           <SearchBar onSearch={this.search} />
           <div className="App-playlist">
             <SearchResults SearchResults={this.state.SearchResults} onAdd={this.doThese} />
-            <Playlist playlistTracks={this.state.playlistTracks} onNameChange={this.updatePlaylistName} onRemove={this.state.removeTrack} onSave={this.savePlaylist} />
+            <Playlist playlistTracks={this.state.playlistTracks} onNameChange={this.updatePlaylistName} onRemove={this.removeTrack} onSave={this.savePlaylist} />
+
           </div>
         </div>
       </div>
-      
     );
   }
 

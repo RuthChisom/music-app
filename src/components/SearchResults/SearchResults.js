@@ -8,11 +8,6 @@ class SearchResults extends React.Component{
             <div className="SearchResults">
                 <h2>Results</h2>
                 <TrackList tracks={this.props.SearchResults} onAdd={this.props.onAdd}></TrackList>
-                {/* {this.props.tracks.map(track=>{
-                    return(
-                        <track track={track} key={track.id} onAdd={this.props.onAdd} isRemoval={this.props.isRemoval} onRemove={this.props.onRemove} />
-                    )
-                })} */}
             </div>
         )
     }
