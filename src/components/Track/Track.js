@@ -25,11 +25,11 @@ class Track extends React.Component{
     renderAction(){
         if(this.props.isRemoval){
             return(
-                <button className="Track-action" onClick="{this.removeTrack}"> - </button>
+                <button className="Track-action" onClick={this.removeTrack}> - </button>
             )
         }
         return(
-            <button className="Track-action" onClick="{this.addTrack}"> + </button>
+            <button className="Track-action" onClick={this.addTrack}> + </button>
         )
     }
 
@@ -43,7 +43,7 @@ class Track extends React.Component{
                         src={"https://open.spotify.com/embed/track/"+ this.props.track.id}
                         width="300"
                         height="80"
-                        frameborder="0"
+                        frameBorder="0"
                         allowtransparency="true"
                         allow="encrypted-media"
                         title="preview"/>
